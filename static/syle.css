@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Josefin+Sans:ital@1&family=Pangolin&display=swap');
+
+body{
+    /* background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(13,75,181,1) 50%, rgba(0,212,255,1) 83%); */
+    background: rgb(0,112,247);
+background: radial-gradient(circle, rgba(0,112,247,1) 0%, rgba(0,201,255,1) 50%);
+}
+
+.container{
+    height: 100vh;    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+    width: 90%;
+    height: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button[type=submit]{
+    width: auto;
+    background: rgb(0,64,255);
+    background: linear-gradient(90deg, rgba(0,64,255,1) 0%, rgba(0,212,255,1) 50%); 
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 5px;
+    color:white;
+    font-weight: bold;
+    font-family: "Pangolin", cursive;
+}
+
+.main-app{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    /* margin-left: 40px;
+    margin-right: 40px;
+    text-align: center; */
+    width: 40%;
+    /* vertical-align: middle; */
+    padding-bottom: 20px;
+}
+
+.main-app > h2{
+    font-family: "Pangolin", cursive;
+}
+
+.main-app > i, .item-list > i{
+    font-family: "Caveat", cursive;
+}
+.action{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#clear{
+    background-color: rgb(0, 153, 255);
+    border-radius: 25%;
+    padding: 10px 20px;
+    color:white;
+    font-weight: bold;
+    font-family: "Pangolin", cursive;
+}
+
+#empty{
+    background-color: tomato;
+    border-radius: 25%;
+    padding: 10px 20px;
+    color:white;
+    font-weight: bold;
+    font-family: "Pangolin", cursive;
+}
+
+#save{
+    background-color: green;
+    border-radius: 25%;
+    padding: 10px 20px;
+    color:white;
+    font-weight: bold;
+    font-family: "Pangolin", cursive;
+}
+
+@media(max-width:1200px){
+    .main-app{
+        width: auto;
+    }
+    #clear, #empty, #save{
+        padding:5px 10px;
+        color: white;
+        font-size: 10px;
+    }
+}
+
+
+h2,i,.todo{
+    padding-left: 25px;
+}
+.item-list{
+    height: 200px;
+    overflow: scroll;
+    /* border: 1px solid ;
+    width: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background-color: honeydew; */
+}
+
+.listitem{
+    background: rgb(0,64,255);
+    background: linear-gradient(90deg, rgba(0,64,255,1) 0%, rgba(0,212,255,1) 50%); 
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    padding-left: 20px;
+}
+
+
+
+.submit-todo:hover{
+    color: honeydew;
+}
+
+.completed{
+    text-decoration: line-through;
+    width: 100%;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/syle.css">
+    <title>TODO APP</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main-app">
+            <h2>My Todo App</h2>
+            <i>Click on item to mark it complete</i>
+    
+            <div class="todo">
+            
+                <form class="todo-form">
+                    <input type="text" id="todo-input">
+                    <!-- <input class="submit-todo" type="submit" value="Add Item"> -->
+                    <button type="submit">Add Item</button>
+                </form>
+            </div>
+    
+            <div class="item-list">
+                <i id="error" style="color: tomato;"></i>
+                <ol class="todo-list">
+                    <!-- <li class="todoitem"></li> -->
+                </ol>
+            </div>
+    <!-- <p id="myparagraph">Hello World!</p> -->
+            <div class="action">
+                <button id="clear">Clear Completed</button>
+                <button id="empty">Empty List</button>
+                <button id="save">Save List</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="static/main.js"></script>
+<script>
+    // var p = document.querySelector("#myparagraph");
+    // p.innerHTML = "Wariz";
+    // alert(p.innerHTML);
+</script>
+</html>
