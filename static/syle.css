@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Josefin+Sans:ital@1&family=Pangolin&display=swap');
 
 body{
-    /* background: rgb(0,212,255);
-    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(13,75,181,1) 50%, rgba(0,212,255,1) 83%); */
     background: rgb(0,112,247);
-background: radial-gradient(circle, rgba(0,112,247,1) 0%, rgba(0,201,255,1) 50%);
+    background: radial-gradient(circle, rgba(0,112,247,1) 0%, rgba(0,201,255,1) 50%);
 }
 
 .container{
     height: 100vh;    
     display: flex;
-    
     justify-content: center;
     align-items: center;
 }
@@ -23,9 +20,7 @@ form input{
 
 button[type=submit]{
     width: auto;
-    background: rgb(0,64,255);
     background: linear-gradient(90deg, rgba(0,64,255,1) 0%, rgba(0,212,255,1) 50%); 
-    /* border: 1px solid black; */
     border-radius: 10px;
     padding: 10px 20px;
     margin-top: 5px;
@@ -37,11 +32,7 @@ button[type=submit]{
 .main-app{
     background-color: whitesmoke;
     border-radius: 20px;
-    /* margin-left: 40px;
-    margin-right: 40px;
-    text-align: center; */
     width: 40%;
-    /* vertical-align: middle; */
     padding-bottom: 20px;
 }
 
@@ -92,7 +83,6 @@ button[type=submit]{
     }
     #clear, #empty, #save{
         padding:5px 10px;
-        color: white;
         font-size: 10px;
     }
 }
@@ -101,19 +91,13 @@ button[type=submit]{
 h2,i,.todo{
     padding-left: 25px;
 }
+
 .item-list{
-    height: 200px;
+    height: 400px;
     overflow: scroll;
-    /* border: 1px solid ;
-    width: auto;
-    margin-left: 50px;
-    margin-right: 50px;
-    border-radius: 10px;
-    background-color: honeydew; */
 }
 
 .listitem{
-    background: rgb(0,64,255);
     background: linear-gradient(90deg, rgba(0,64,255,1) 0%, rgba(0,212,255,1) 50%); 
     padding-bottom: 5px;
     padding-top: 5px;
@@ -127,7 +111,7 @@ h2,i,.todo{
 
 
 
-.submit-todo:hover{
+button[type=submit]:hover{
     color: honeydew;
 }
 

@@ -6,21 +6,6 @@ var save = document.querySelector("#save");           // Select Save Button
 var olList = document.querySelector(".todo-list");      // Select Ordered List
 
 
-// Add Event Function
-// function addList(item){
-//     // Use validate function
-//     if (validateInput(item) !== 0){
-        
-//         var listItem = document.createElement("li");
-//         listItem.innerHTML = item;
-//         listItem.classList.add("listitem");
-//         olList.appendChild(listItem);
-//     }
-// }
-// <ol>
-// <li class="listitem">Play</li>
-
-// </ol>
 
 function newToDoItem(itemText, completed) {
     if (validateInput(itemText) !== 0){
