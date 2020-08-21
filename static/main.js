@@ -3,24 +3,22 @@ var error = document.getElementById("error");           // Select Error Element
 var clear = document.querySelector("#clear");           // Select Clear Button
 var empty = document.querySelector("#empty");           // Select Empty Button
 var save = document.querySelector("#save");           // Select Save Button
-var olList = document.querySelector(".todo-list");      // Select Ordered List
+var todoDiv = document.querySelector(".todo-list");      // Select Ordered List
 
 
 
 function newToDoItem(itemText, completed) {
     if (validateInput(itemText) !== 0){
-        var listDiv = document.createElement("div");
-        var listItem = document.createElement("li");
+        var todoItem = document.createElement("p");
         var toDoText = document.createTextNode(itemText);
-        listItem.appendChild(toDoText);
-        listDiv.appendChild(listItem);
-        listDiv.classList.add("listitem");
+        todoItem.appendChild(toDoText);
+        todoItem.classList.add("listitem");
 
         if (completed) {
-            listItem.classList.add("completed");
+            todoItem.classList.add("completed");
         }
 
-        olList.appendChild(listDiv);
+        todoDiv.appendChild(todoItem);
         // toDoItem.addEventListener("dblclick", toggleToDoItemState);
     }
     
@@ -31,8 +29,8 @@ function newToDoItem(itemText, completed) {
 // Validate input function
 function validateInput(input){
     var res=1;
-    for (var i = 0; i < olList.children.length; i++) {
-        var toDo = olList.children.item(i);
+    for (var i = 0; i < todoDiv.children.length; i++) {
+        var toDo = todoDiv.children.item(i);
         if (toDo.innerText == input){
             error.innerHTML = "Duplicate entry is not allowed!";
             res = 0;
@@ -45,7 +43,7 @@ function validateInput(input){
 
 // Empty List Function
 function emptyList(){
-    return olList.innerHTML = "";     
+    return todoDiv.innerHTML = "";     
 }
 
 // Clear Completed Function
@@ -61,8 +59,8 @@ function saveList(){
 
     var toDos = [];
 
-    for (var i = 0; i < olList.children.length; i++) {
-        var toDo = olList.children.item(i);
+    for (var i = 0; i < todoDiv.children.length; i++) {
+        var toDo = todoDiv.children.item(i);
 
         var toDoInfo = {
             "task": toDo.innerText,
@@ -74,7 +72,7 @@ function saveList(){
     }
 
     localStorage.setItem("toDos", JSON.stringify(toDos));
-    alert("Todo Saved");
+    alert("List Saved");
 }
 
 
@@ -119,7 +117,7 @@ empty.addEventListener("click", ()=>{emptyList()});
 save.addEventListener("click", ()=>{saveList()});
 
 // Complete Task Event
-olList.addEventListener('dblclick', function(e){
+todoDiv.addEventListener('dblclick', function(e){
     var target = getEventTarget(e);
     target.classList.toggle("completed");
 });
